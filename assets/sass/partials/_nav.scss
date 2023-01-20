@@ -38,11 +38,12 @@ nav {
 #subNav {
   background-color: $theme-color-secondary;
   color: $color-gray;
-  ul {
+  #subNavUl {
     margin: 0;
     display: flex;
     li {
       padding: 1em;
+      font-weight: 500;
       cursor: pointer;
     }
   }

@@ -116,12 +116,13 @@ nav ul li i {
   background-color: #26282a;
   color: #979aa4;
 }
-#subNav ul {
+#subNav #subNavUl {
   margin: 0;
   display: flex;
 }
-#subNav ul li {
+#subNav #subNavUl li {
   padding: 1em;
+  font-weight: 500;
   cursor: pointer;
 }
 
