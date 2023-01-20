@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DnD Beyond</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link href="/assets/css/app.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="d-flex align-items-center justify-content-between">
+        <div id="navTop">
+          <img class="navLogo" src="/assets/img/logo.jpg" height="50px" />
+          <div>
+            <form class="d-flex">
+              <button type="button" class="button search" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+              <button type="button" class="button search">
+                <i class="bi bi-list"></i>
+              </button>
+              <input type="text" placeholder="Search Everything..." />
+            </form>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="socials">
+            <ul class="d-flex align-items-center">
+              <li><i class="bi bi-discord"></i></li>
+              <li><i class="bi bi-twitter"></i></li>
+              <li><i class="bi bi-facebook"></i></li>
+              <li><i class="bi bi-youtube"></i></li>
+              <li><i class="bi bi-twitch"></i></li>
+            </ul>
+          </div>
+          <div class="userArea">
+            <button type="button" id="login-button" class="button">
+              Sign In
+            </button>
+            <button type="button" id="register-button" class="button">
+              Free Sign Up
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div id="subNav">
+        <ul>
+          <li>Collections</li>
+          <li>Game Rules</li>
+          <li>Sources</li>
+          <li>Tools</li>
+          <li>Marketplace</li>
+          <li>Media</li>
+          <li>Forums</li>
+          <li>New Player Guide</li>
+          <li>Subscribe</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <div class="mainBg">
+          <div class="mainContent">
+            <div>
+              <h1>Playing Dungeons & Dragons Has Never Been Easier</h1>
+              <p>
+                Create characters in seconds, build and run combat encounters on
+                the fly, and start your collection of official books with D&D
+                Beyond. Click below to get started.
+              </p>
+              <button type="button" id="mainButton">Sign Up For Free</button>
+            </div>
+          </div>
+        </div>
+        <div id="subMainContent">
+          <div><img src="/assets/img/card-1.png" /></div>
+          <div><img src="/assets/img/card-2.png" /></div>
+          <div><img src="/assets/img/card-3.png" /></div>
+          <div><img src="/assets/img/card-4.png" /></div>
+        </div>
+      </article>
+      <secion id="carouselRecommended">
+        <div class="col-12 col-md-10">
+          <div id="carouselArticles" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselArticles"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselArticles"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselArticles"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselArticles"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div id="c-pic-1" class="carousel-pic"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>What is d&d beyond?</h5>
+                  <p>
+                    Dungeons & Dragons (D&D) is a roleplaying game played by
+                    millions of people around the world. D&D Beyond makes
+                    playing D&D easier.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div id="c-pic-2" class="carousel-pic"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Dragonlance: Shadow of the Dragon Queen Is Out Now!</h5>
+                  <p>
+                    Takhisis the Dragon Queen has returned to the world of
+                    Krynn. Across the land, her armies of fanatical draconians
+                    wage a brutal war of conquest.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div id="c-pic-3" class="carousel-pic"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>What you get with a d&d beyond subscription</h5>
+                  <p>
+                    Subscribe to D&D Beyond to create unlimited characters,
+                    share your books with friends, and access game tools that
+                    make playing Dungeons & Dragons easier.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div id="c-pic-4" class="carousel-pic"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Shop D&D's Biggest Sale of the Year!</h5>
+                  <p>
+                    The biggest sale of the year is here! Shop now all your
+                    favourite modules and missing books!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselArticles"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselArticles"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <button id="seeMore" type="submit">See all posts</button>
+      </secion>
+      <section id="partnership">
+        <a href="https://company.wizards.com/en/careers"
+          >Want to become our partner? Click here!</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <div id="upperFooter">
+        <div id="footerLogo">
+          <img src="/assets/img/logo.jpg" width="200px" />
+          <span>Play With Advantage</span>
+        </div>
+        <div class="footerLinks">
+          <div class="footerListWrapper">
+            <ul class="footerList">
+              <li class="list-label"><a>Quick links</a></li>
+              <li class="list-item"><a>Compendium</a></li>
+              <li class="list-item"><a>Builder</a></li>
+              <li class="list-item"><a>Characters</a></li>
+              <li class="list-item"><a>Changelog</a></li>
+              <li class="list-item"><a>Careers</a></li>
+            </ul>
+            <ul class="footerList">
+              <li class="list-label"><a>Support</a></li>
+              <li class="list-item"><a>Help Portal</a></li>
+              <li class="list-item"><a>Support forum</a></li>
+              <li class="list-item"><a>Contact us</a></li>
+              <li class="list-item"><a>Do not sell my info</a></li>
+              <li class="list-item"><a>Cookies</a></li>
+            </ul>
+            <ul class="footerList">
+              <li class="list-label"><a>Follow us</a></li>
+              <li class="list-item"><a>Twitter</a></li>
+              <li class="list-item"><a>Facebook</a></li>
+              <li class="list-item"><a>Youtube</a></li>
+              <li class="list-item"><a>Twitch</a></li>
+              <li class="list-item"><a>Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="lowerFooter">
+        <div class="copyright">
+          <div class="copyright-site">
+            &copy;2023 D&D Beyond | All Rights Reserved
+          </div>
+          <div class="rights">
+            Dungeons & Dragons, D&D, their respective logos, and all Wizards
+            titles and characters are property of Wizards of the Coast LLC in
+            the U.S.A. and other countries. ©2023 Wizards.
+          </div>
+        </div>
+        <div id="lowerFooterLinks">
+          <ul>
+            <li>
+              <a
+                href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="https://company.wizards.com/en/legal/terms"
+                >Terms of Service</a
+              >
+            </li>
+            <li><a href="http://dndbeyond-support.wizards.com">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

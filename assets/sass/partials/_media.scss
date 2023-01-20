@@ -1,0 +1,21 @@
+@media screen and (max-width: 1024px) {
+  nav {
+    input,
+    .socials,
+    .userArea {
+      display: none;
+    }
+  }
+  #navTop {
+    width: 100%;
+    justify-content: space-between !important;
+    .bi-list {
+      font-size: 1.5em;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .bi-list {
+    display: none;
+  }
+}

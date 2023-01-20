@@ -1,0 +1,47 @@
+.button {
+  margin: 0 $spacing-1;
+  cursor: pointer;
+}
+
+.search {
+  border: 0;
+  background-color: inherit;
+  color: $color-gray;
+  font-size: 1.3em;
+}
+
+#login-button {
+  color: white;
+  background: inherit;
+  margin: 0.5em;
+  padding: $spacing-1 1em;
+  border: 0;
+}
+
+#register-button {
+  margin: 0.5em;
+  padding: $spacing-1 1em;
+  color: white;
+  font-weight: 700;
+  background-color: $theme-color-primary;
+  border: 0;
+}
+
+#mainButton {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background-color: $theme-color-tertiary;
+  color: inherit;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.5em 3em;
+  margin-top: 1em;
+}
+
+#seeMore {
+  @extend #register-button;
+  text-transform: uppercase;
+  padding: 0.75em 3em;
+  margin-top: 2em;
+}

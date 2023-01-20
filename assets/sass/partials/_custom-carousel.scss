@@ -1,0 +1,31 @@
+#carouselRecommended {
+  @include flexCenterCenter;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.carousel-item {
+  height: 60vh;
+}
+
+.carousel-caption {
+  h5 {
+    text-transform: capitalize;
+  }
+}
+
+.carousel-pic {
+  height: 100%;
+  background-size: cover;
+}
+#c-pic-1 {
+  background-image: url(/assets/img/dnd-pic-1.png);
+}
+#c-pic-2 {
+  background-image: url(/assets/img/dnd-pic-2.png);
+}
+#c-pic-3 {
+  background-image: url(/assets/img/dnd-pic-3.png);
+}
+#c-pic-4 {
+  background-image: url(/assets/img/dnd-pic-4.png);
+}
