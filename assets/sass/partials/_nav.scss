@@ -1,8 +1,14 @@
+header {
+  background-color: black;
+}
 nav {
   background: black;
   border-bottom: 1px solid red;
 
   #navTop {
+    @include flexCenterCenter;
+  }
+  #navContainer {
     @include flexCenterCenter;
   }
   .navLogo {
@@ -66,5 +72,21 @@ nav {
 @media screen and (min-width: 1025px) {
   .bi-list {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #navContainer {
+    width: 100%;
+    border-bottom: 1px solid red;
+  }
+  #subNavContainer {
+    width: 100%;
+    background-color: $theme-color-secondary;
+  }
+  nav,
+  #subNav {
+    margin: 0 auto;
+    max-width: 1200px;
+    border-bottom: 0;
   }
 }

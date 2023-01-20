@@ -25,76 +25,84 @@
   </head>
   <body>
     <header>
-      <nav class="d-flex align-items-center justify-content-between">
-        <div id="navTop">
-          <img class="navLogo" src="/assets/img/logo.jpg" height="50px" />
-          <div>
-            <form class="d-flex">
-              <button type="button" class="button search" type="submit">
-                <i class="bi bi-search"></i>
+      <div id="navContainer">
+        <nav class="d-flex align-items-center justify-content-between">
+          <div id="navTop">
+            <img class="navLogo" src="/assets/img/logo.jpg" height="50px" />
+            <div>
+              <form class="d-flex">
+                <button type="button" class="button search" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+                <button type="button" class="button search">
+                  <i class="bi bi-list"></i>
+                </button>
+                <input type="text" placeholder="Search Everything..." />
+              </form>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="socials">
+              <ul class="d-flex align-items-center">
+                <li><i class="bi bi-discord"></i></li>
+                <li><i class="bi bi-twitter"></i></li>
+                <li><i class="bi bi-facebook"></i></li>
+                <li><i class="bi bi-youtube"></i></li>
+                <li><i class="bi bi-twitch"></i></li>
+              </ul>
+            </div>
+            <div class="userArea">
+              <button type="button" id="login-button" class="button">
+                Sign In
               </button>
-              <button type="button" class="button search">
-                <i class="bi bi-list"></i>
+              <button type="button" id="register-button" class="button">
+                Free Sign Up
               </button>
-              <input type="text" placeholder="Search Everything..." />
-            </form>
+            </div>
           </div>
+        </nav>
+      </div>
+      <div id="subNavContainer">
+        <div id="subNav">
+          <ul>
+            <li>Collections</li>
+            <li>Game Rules</li>
+            <li>Sources</li>
+            <li>Tools</li>
+            <li>Marketplace</li>
+            <li>Media</li>
+            <li>Forums</li>
+            <li>New Player Guide</li>
+            <li>Subscribe</li>
+          </ul>
         </div>
-        <div class="d-flex align-items-center">
-          <div class="socials">
-            <ul class="d-flex align-items-center">
-              <li><i class="bi bi-discord"></i></li>
-              <li><i class="bi bi-twitter"></i></li>
-              <li><i class="bi bi-facebook"></i></li>
-              <li><i class="bi bi-youtube"></i></li>
-              <li><i class="bi bi-twitch"></i></li>
-            </ul>
-          </div>
-          <div class="userArea">
-            <button type="button" id="login-button" class="button">
-              Sign In
-            </button>
-            <button type="button" id="register-button" class="button">
-              Free Sign Up
-            </button>
-          </div>
-        </div>
-      </nav>
-      <div id="subNav">
-        <ul>
-          <li>Collections</li>
-          <li>Game Rules</li>
-          <li>Sources</li>
-          <li>Tools</li>
-          <li>Marketplace</li>
-          <li>Media</li>
-          <li>Forums</li>
-          <li>New Player Guide</li>
-          <li>Subscribe</li>
-        </ul>
       </div>
     </header>
 
     <main>
       <article>
         <div class="mainBg">
-          <div class="mainContent">
-            <div>
-              <h1>Playing Dungeons & Dragons Has Never Been Easier</h1>
-              <p>
-                Create characters in seconds, build and run combat encounters on
-                the fly, and start your collection of official books with D&D
-                Beyond. Click below to get started.
-              </p>
-              <button type="button" id="mainButton">Sign Up For Free</button>
+          <div id="test">
+            <div class="mainContent">
+              <div>
+                <h1>Playing Dungeons & Dragons Has Never Been Easier</h1>
+                <p>
+                  Create characters in seconds, build and run combat encounters
+                  on the fly, and start your collection of official books with
+                  D&D Beyond. Click below to get started.
+                </p>
+                <button type="button" id="mainButton">Sign Up For Free</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="subMainContent">
-          <div><img src="/assets/img/card-1.png" /></div>
-          <div><img src="/assets/img/card-2.png" /></div>
-          <div><img src="/assets/img/card-3.png" /></div>
-          <div><img src="/assets/img/card-4.png" /></div>
+          <div id="cards-Wrap">
+            <div id="subMainContent">
+              <div><img src="/assets/img/card-1.png" /></div>
+              <div><img src="/assets/img/card-2.png" /></div>
+              <div><img src="/assets/img/card-3.png" /></div>
+              <div><img src="/assets/img/card-4.png" /></div>
+            </div>
+          </div>
         </div>
       </article>
       <secion id="carouselRecommended">
@@ -131,7 +139,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div id="c-pic-1" class="carousel-pic"></div>
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block">
                   <h5>What is d&d beyond?</h5>
                   <p>
                     Dungeons & Dragons (D&D) is a roleplaying game played by
@@ -142,7 +150,7 @@
               </div>
               <div class="carousel-item">
                 <div id="c-pic-2" class="carousel-pic"></div>
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block">
                   <h5>Dragonlance: Shadow of the Dragon Queen Is Out Now!</h5>
                   <p>
                     Takhisis the Dragon Queen has returned to the world of
@@ -153,7 +161,7 @@
               </div>
               <div class="carousel-item">
                 <div id="c-pic-3" class="carousel-pic"></div>
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block">
                   <h5>What you get with a d&d beyond subscription</h5>
                   <p>
                     Subscribe to D&D Beyond to create unlimited characters,
@@ -164,7 +172,7 @@
               </div>
               <div class="carousel-item">
                 <div id="c-pic-4" class="carousel-pic"></div>
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block">
                   <h5>Shop D&D's Biggest Sale of the Year!</h5>
                   <p>
                     The biggest sale of the year is here! Shop now all your
@@ -201,10 +209,99 @@
         </div>
         <button id="seeMore" type="submit">See all posts</button>
       </secion>
-      <section id="partnership">
-        <a href="https://company.wizards.com/en/careers"
-          >Want to become our partner? Click here!</a
-        >
+      <section>
+        <div id="partnership">
+          <a href="https://company.wizards.com/en/careers"
+            >Want to become our partner? Look no further!</a
+          >
+        </div>
+        <h2 class="fs-1 text-center">Choose your level</h2>
+        <div class="container-fluid">
+          <div class="row col-12" id="tierWrap">
+            <div class="col-12 col-md-6">
+              <div class="partnershipHeader">
+                <div id="heroTier" class="tierDiv">
+                  <img src="/assets/img/svg/hero.svg" />
+                </div>
+                <div class="tierHeader"><h3>Hero</h3></div>
+              </div>
+              <div class="tierBox">
+                <ul class="partnerList">
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Create unlimited characters</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Add publicly shared homebrew content</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Early access to new tools</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Create unlimited encounters</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-x"></i>
+                    <span>Monthly partner perks</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-x"></i>
+                    <span>Share unlocked content with other players</span>
+                  </li>
+                </ul>
+                <a
+                  ><button type="button" class="partnerButton">
+                    More info
+                  </button></a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="partnershipHeader">
+                <div id="masterTier" class="tierDiv">
+                  <img src="/assets/img/svg/master.svg" />
+                </div>
+                <div class="tierHeader"><h3>Master</h3></div>
+              </div>
+              <div class="tierBox">
+                <ul class="partnerList">
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Create unlimited characters</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Add publicly shared homebrew content</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Early access to new tools</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Create unlimited encounters</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Monthly partner perks</span>
+                  </li>
+                  <li class="partnerFeature">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Share unlocked content with other players</span>
+                  </li>
+                </ul>
+                <a
+                  ><button type="button" class="partnerButton">
+                    More info
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -248,7 +345,7 @@
           <div class="copyright-site">
             &copy;2023 D&D Beyond | All Rights Reserved
           </div>
-          <div class="rights">
+          <div>
             Dungeons & Dragons, D&D, their respective logos, and all Wizards
             titles and characters are property of Wizards of the Coast LLC in
             the U.S.A. and other countries. ©2023 Wizards.

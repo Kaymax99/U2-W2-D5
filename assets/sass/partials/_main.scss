@@ -3,12 +3,11 @@ article {
   flex-direction: column;
   color: white;
   .mainBg {
-    height: 550px;
+    width: 100%;
     background-image: url(/assets/img/main-bg.png);
-    background-position-y: top;
-    background-position-x: right;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: black;
   }
   .mainContent {
     padding: 1.5em;
@@ -32,11 +31,33 @@ article {
       }
     }
   }
+  #cards-Wrap {
+    width: 100%;
+    @include flexCenterCenter;
+    position: relative;
+    margin: 0 auto;
+  }
+  #cards-Wrap::before {
+    content: " ";
+    position: absolute;
+    background: #000;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0,
+      rgb(255, 255, 255) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0px;
+    z-index: 0;
+  }
   #subMainContent {
+    z-index: 1;
+    position: relative;
     height: 100%;
-    padding-top: 2em;
-    background-image: url(/assets/img/banner-vignette.png);
-    background-repeat: repeat-x;
+    padding: 2em 0;
     @include flexCenterCenter;
     img {
       width: 24vw;
@@ -44,30 +65,51 @@ article {
   }
 }
 
-#partnership {
-  background-color: $theme-color-primary;
-  color: white;
-  font-weight: bold;
-  padding: 1em 0;
-  text-align: center;
+// MEDIA
+@media screen and (min-width: 1200px) {
+  #test,
+  #subMainContent {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #subMainContent {
+    img {
+      max-width: 300px;
+    }
+  }
 }
 
-// MEDIA
 @media screen and (max-width: 1024px) {
   article {
-    /* display: block; */
+    #cards-Wrap::before {
+      background: linear-gradient(
+        0deg,
+        rgb(255, 255, 255) 0,
+        rgb(255, 255, 255) 95%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      top: -60px;
+    }
     .mainBg {
       width: 100%;
+      @include flexCenterCenter;
+      flex-direction: column;
+      justify-content: center;
+      background-image: unset;
+    }
+    #test {
+      @include flexCenterCenter;
+      width: 100%;
       background-image: url(/assets/img/main-bg-mobile.png);
-      background-position-y: unset;
-      background-position-x: right;
+      background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      height: unset;
+      padding-bottom: 50px;
     }
     .mainContent {
       flex-direction: column;
-      width: 60%;
+      width: 100%;
+      max-width: 600px;
       justify-content: center;
       align-self: center;
       text-align: center;
@@ -83,10 +125,30 @@ article {
     }
     #subMainContent {
       flex-direction: column;
-      background-position-y: bottom;
+      background-image: unset;
       padding-bottom: 0.25em;
       img {
-        width: 50vw;
+        scale: 1.1;
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  article {
+    div {
+      .mainContent {
+        h1 {
+          font-size: 1.5em;
+        }
+        p {
+          font-size: 0.9em;
+        }
+        #mainButton {
+          font-size: 1em;
+          padding: 0.5em 1.5em;
+        }
       }
     }
   }

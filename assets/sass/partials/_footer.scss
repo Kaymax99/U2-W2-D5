@@ -2,11 +2,13 @@
   @include flexCenterCenter;
   justify-content: space-between;
   padding: 2em 2em 0;
+  margin-top: 2em;
   background-color: $theme-color-secondary;
   color: $color-gray;
   #footerLogo {
     @include flexCenterCenter;
     flex-direction: column;
+    flex-basis: 0;
     span {
       font-family: "Roboto Condensed", sans-serif;
       text-transform: uppercase;
@@ -16,16 +18,18 @@
     }
   }
   .footerLinks {
-    width: 50%;
+    flex-basis: 2;
   }
   .footerListWrapper {
+    width: 100%;
     @include flexCenterCenter;
+    justify-content: space-evenly;
     .footerList {
       font-family: "Roboto Condensed", sans-serif;
-      width: 200px;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 12px;
+      padding: 0 10px;
       .list-item {
         color: white;
         padding-top: 5px;
@@ -38,6 +42,7 @@
   background-color: #191a1b;
   padding: 0.75em;
   font-size: 0.7em;
+  color: $color-gray;
 
   @include flexCenterCenter;
   justify-content: space-between;
@@ -46,15 +51,8 @@
     width: 70%;
   }
 
-  .copyright-site,
-  #lowerFooterLinks {
-    color: $color-gray;
-  }
   .copyright-site {
     padding-bottom: 0.5em;
-  }
-  .rights {
-    color: white;
   }
 
   #lowerFooterLinks {
@@ -68,6 +66,36 @@
       li {
         padding-left: 5px;
       }
+    }
+  }
+}
+
+// MEDIA
+
+@media screen and (max-width: 1024px) {
+  #lowerFooter {
+    width: 100%;
+    display: block;
+    #lowerFooterLinks {
+      ul {
+        justify-content: center;
+        li {
+          padding-left: 20px;
+        }
+      }
+    }
+    .copyright {
+      width: 100%;
+      padding-bottom: 1em;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  #upperFooter {
+    display: block;
+    padding: 2em 0;
+    .footerLinks {
+      margin-top: 1rem;
     }
   }
 }
