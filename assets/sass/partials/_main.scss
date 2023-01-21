@@ -1,7 +1,7 @@
 article {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: set-text-color($theme-color-black);
   .mainBg {
     width: 100%;
     background-image: url(/assets/img/main-bg.png);
@@ -10,7 +10,7 @@ article {
     background-repeat: no-repeat;
   }
   .mainContent {
-    padding: 1.5em;
+    padding: 20px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -31,43 +31,11 @@ article {
       }
     }
   }
-  #cards-Wrap {
-    width: 100%;
-    @include flexCenterCenter;
-    position: relative;
-    margin: 0 auto;
-  }
-  #cards-Wrap::before {
-    content: " ";
-    position: absolute;
-    background: #000;
-    background: linear-gradient(
-      0deg,
-      rgb(255, 255, 255) 0,
-      rgb(255, 255, 255) 70%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0px;
-    z-index: 0;
-  }
-  #subMainContent {
-    z-index: 1;
-    position: relative;
-    height: 100%;
-    padding: 2em 0;
-    @include flexCenterCenter;
-    img {
-      width: 24vw;
-    }
-  }
 }
 
 // MEDIA
 @media screen and (min-width: 1200px) {
-  #test,
+  #contentWrap,
   #subMainContent {
     max-width: 1200px;
     margin: 0 auto;
@@ -81,15 +49,6 @@ article {
 
 @media screen and (max-width: 1024px) {
   article {
-    #cards-Wrap::before {
-      background: linear-gradient(
-        0deg,
-        rgb(255, 255, 255) 0,
-        rgb(255, 255, 255) 95%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      top: -60px;
-    }
     .mainBg {
       width: 100%;
       @include flexCenterCenter;
@@ -97,7 +56,7 @@ article {
       justify-content: center;
       background-image: unset;
     }
-    #test {
+    #contentWrap {
       @include flexCenterCenter;
       width: 100%;
       background-image: url(/assets/img/main-bg-mobile.png);
@@ -121,15 +80,6 @@ article {
           font-size: 1.1em;
           font-weight: bold;
         }
-      }
-    }
-    #subMainContent {
-      flex-direction: column;
-      background-image: unset;
-      padding-bottom: 0.25em;
-      img {
-        scale: 1.1;
-        width: 95%;
       }
     }
   }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -24,6 +25,12 @@ a {
   cursor: pointer;
 }
 
+.hov:hover {
+  transition: all 0.3s;
+  background-color: #1579bd;
+  scale: 1.02;
+}
+
 .search {
   border: 0;
   background-color: inherit;
@@ -32,8 +39,8 @@ a {
 }
 
 #login-button {
-  color: white;
   background: inherit;
+  color: #ffffff;
   margin: 0.5em;
   padding: 0.5em 1em;
   border: 0;
@@ -42,9 +49,9 @@ a {
 #register-button, #seeMore {
   margin: 0.5em;
   padding: 0.5em 1em;
-  color: white;
-  font-weight: 700;
   background-color: #bc0f0f;
+  color: #ffffff;
+  font-weight: 700;
   border: 0;
 }
 
@@ -52,7 +59,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.25rem;
-  background-color: #1579bc;
+  background-color: #1b9af0;
   color: inherit;
   border: 0;
   border-radius: 5px;
@@ -72,11 +79,11 @@ a {
 }
 
 header {
-  background-color: black;
+  background-color: #000000;
 }
 
 nav {
-  background: black;
+  background: #000000;
   border-bottom: 1px solid red;
 }
 nav #navTop {
@@ -105,7 +112,7 @@ nav ul {
   border-right: 1px solid rgba(128, 128, 128, 0.4);
 }
 nav ul li {
-  color: white;
+  color: #ffffff;
   padding: 1em 0.5em;
 }
 nav ul li i {
@@ -167,7 +174,7 @@ nav .userArea {
 article {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #ffffff;
 }
 article .mainBg {
   width: 100%;
@@ -177,7 +184,7 @@ article .mainBg {
   background-repeat: no-repeat;
 }
 article .mainContent {
-  padding: 1.5em;
+  padding: 20px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -197,40 +204,9 @@ article .mainContent div p {
   font-size: 1.25rem;
   text-shadow: 6px 5px 8px #000000;
 }
-article #cards-Wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0 auto;
-}
-article #cards-Wrap::before {
-  content: " ";
-  position: absolute;
-  background: #000;
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 70%, rgba(255, 255, 255, 0) 100%);
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0px;
-  z-index: 0;
-}
-article #subMainContent {
-  z-index: 1;
-  position: relative;
-  height: 100%;
-  padding: 2em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-article #subMainContent img {
-  width: 24vw;
-}
 
 @media screen and (min-width: 1200px) {
-  #test,
+  #contentWrap,
 #subMainContent {
     max-width: 1200px;
     margin: 0 auto;
@@ -240,10 +216,6 @@ article #subMainContent img {
   }
 }
 @media screen and (max-width: 1024px) {
-  article #cards-Wrap::before {
-    background: linear-gradient(0deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 95%, rgba(255, 255, 255, 0) 100%);
-    top: -60px;
-  }
   article .mainBg {
     width: 100%;
     display: flex;
@@ -253,7 +225,7 @@ article #subMainContent img {
     justify-content: center;
     background-image: unset;
   }
-  article #test {
+  article #contentWrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,15 +251,6 @@ article #subMainContent img {
     font-size: 1.1em;
     font-weight: bold;
   }
-  article #subMainContent {
-    flex-direction: column;
-    background-image: unset;
-    padding-bottom: 0.25em;
-  }
-  article #subMainContent img {
-    scale: 1.1;
-    width: 95%;
-  }
 }
 @media screen and (max-width: 400px) {
   article div .mainContent h1 {
@@ -299,6 +262,114 @@ article #subMainContent img {
   article div .mainContent #mainButton, article div .mainContent .partnerButton {
     font-size: 1em;
     padding: 0.5em 1.5em;
+  }
+}
+#cards-Wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+#cards-Wrap::before {
+  content: " ";
+  position: absolute;
+  background: #000;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0px;
+  z-index: 0;
+}
+
+#subMainContent {
+  z-index: 1;
+  height: 100%;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardBg {
+  max-width: 370px;
+  width: 25vw;
+  min-height: 154px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.cardBg:hover {
+  transition: 0.3s;
+  scale: 1.05;
+}
+
+.cardText {
+  font-family: "Roboto Condensed", sans-serif;
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 120px;
+  bottom: 0px;
+  top: 60px;
+  left: 25px;
+}
+
+.hero-icon1 {
+  background-image: url(/assets/img/hero-icons/create-a-character.png);
+}
+
+.hero-icon2 {
+  background-image: url(/assets/img/hero-icons/partnership-benefits.png);
+}
+
+.hero-icon3 {
+  background-image: url(/assets/img/hero-icons/one-dnd.png);
+}
+
+.hero-icon4 {
+  background-image: url(/assets/img/hero-icons/encounter-builder.png);
+}
+
+.blueCard {
+  color: #1b9af0;
+}
+
+.purpleCard {
+  color: #8b4bcc;
+}
+
+.redCard {
+  color: #c41a1f;
+}
+
+.orangeCard {
+  color: #f05523;
+}
+
+@media screen and (max-width: 1024px) {
+  article #cards-Wrap::before {
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 95%, rgba(255, 255, 255, 0) 100%);
+    top: -60px;
+  }
+  article #subMainContent {
+    flex-direction: column;
+    background-image: unset;
+    padding-bottom: 0.25em;
+  }
+  article #subMainContent .cardBg {
+    width: 95vw;
+  }
+  .cardText {
+    font-size: 1.5rem;
+    bottom: 0px;
+    top: 62px;
+    left: 30px;
   }
 }
 #carouselRecommended {
@@ -340,9 +411,25 @@ article #subMainContent img {
   background-image: url(/assets/img/dnd-pic-4.png);
 }
 
+@media screen and (min-width: 1024px) {
+  .carousel-caption h5 {
+    font-size: 2em;
+  }
+  .carousel-caption p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
 #partnership {
   background-color: #bc0f0f;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   padding: 1em 0;
   text-align: center;
@@ -369,12 +456,11 @@ article #subMainContent img {
   border-right: 1px solid #b0b7bd;
 }
 
-.tierDiv {
-  width: 100%;
+.tierIconDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 6px 0;
 }
 
 #tierWrap {
@@ -383,6 +469,10 @@ article #subMainContent img {
 
 .tierBox {
   margin-bottom: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .partnershipHeader img {
@@ -462,7 +552,7 @@ article #subMainContent img {
   padding: 0 10px;
 }
 #upperFooter .footerListWrapper .footerList .list-item {
-  color: white;
+  color: #ffffff;
   padding-top: 5px;
 }
 
@@ -482,18 +572,19 @@ article #subMainContent img {
 #lowerFooter .copyright-site {
   padding-bottom: 0.5em;
 }
+#lowerFooter .bef::before {
+  content: "•";
+  margin: 0px 5px;
+}
 #lowerFooter #lowerFooterLinks {
   align-self: flex-start;
 }
-#lowerFooter #lowerFooterLinks a {
+#lowerFooter #lowerFooterLinks .lowerFooterLinksItem {
   text-decoration: none;
   color: inherit;
 }
 #lowerFooter #lowerFooterLinks ul {
   display: flex;
-}
-#lowerFooter #lowerFooterLinks ul li {
-  padding-left: 5px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -503,9 +594,6 @@ article #subMainContent img {
   }
   #lowerFooter #lowerFooterLinks ul {
     justify-content: center;
-  }
-  #lowerFooter #lowerFooterLinks ul li {
-    padding-left: 20px;
   }
   #lowerFooter .copyright {
     width: 100%;

@@ -28,7 +28,9 @@
       <div id="navContainer">
         <nav class="d-flex align-items-center justify-content-between">
           <div id="navTop">
-            <img class="navLogo" src="/assets/img/logo.jpg" height="50px" />
+            <a href="#"
+              ><img class="navLogo" src="/assets/img/logo.jpg" height="50px"
+            /></a>
             <div>
               <form class="d-flex">
                 <button type="button" class="button search" type="submit">
@@ -44,20 +46,50 @@
           <div class="d-flex align-items-center">
             <div class="socials">
               <ul class="d-flex align-items-center">
-                <li><i class="bi bi-discord"></i></li>
-                <li><i class="bi bi-twitter"></i></li>
-                <li><i class="bi bi-facebook"></i></li>
-                <li><i class="bi bi-youtube"></i></li>
-                <li><i class="bi bi-twitch"></i></li>
+                <li>
+                  <a href="https://dndbeyond.com/discord" target="_blank"
+                    ><i class="bi bi-discord"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/dndbeyond" target="_blank"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/dndbeyond" target="_blank"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw"
+                    target="_blank"
+                    ><i class="bi bi-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.twitch.tv/dndbeyond" target="_blank"
+                    ><i class="bi bi-twitch"></i
+                  ></a>
+                </li>
               </ul>
             </div>
             <div class="userArea">
-              <button type="button" id="login-button" class="button">
+              <a
+                href="https://www.dndbeyond.com/sign-in?returnUrl=/characters"
+                id="login-button"
+                class="button"
+              >
                 Sign In
-              </button>
-              <button type="button" id="register-button" class="button">
+              </a>
+              <a
+                href="https://www.dndbeyond.com/create-account?returnUrl=/characters"
+                id="register-button"
+                class="button"
+              >
                 Free Sign Up
-              </button>
+              </a>
             </div>
           </div>
         </nav>
@@ -65,15 +97,37 @@
       <div id="subNavContainer">
         <div id="subNav">
           <ul id="subNavUl">
-            <li class="nav-item">Collections</li>
-            <li class="nav-item dropdown">Game Rules</li>
-            <li class="nav-item">Sources</li>
-            <li class="nav-item">Tools</li>
-            <li class="nav-item">Marketplace</li>
-            <li class="nav-item">Media</li>
-            <li class="nav-item">Forums</li>
-            <li class="nav-item">New Player Guide</li>
-            <li class="nav-item">Subscribe</li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/characters">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/classes">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/sources#Sourcebooks"
+                >Sources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/player-app">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/marketplace">Marketplace</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/articles">Media</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/forums">Forums</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.dndbeyond.com/how-to-play-dnd"
+                >New Player Guide</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#partnership">Become a partner</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -82,7 +136,7 @@
     <main>
       <article>
         <div class="mainBg">
-          <div id="test">
+          <div id="contentWrap">
             <div class="mainContent">
               <div>
                 <h1>Playing Dungeons & Dragons Has Never Been Easier</h1>
@@ -91,16 +145,36 @@
                   on the fly, and start your collection of official books with
                   D&D Beyond. Click below to get started.
                 </p>
-                <button type="button" id="mainButton">Sign Up For Free</button>
+                <a href="https://www.dndbeyond.com/create-account"
+                  ><button type="button" id="mainButton" class="hov">
+                    Sign Up For Free
+                  </button></a
+                >
               </div>
             </div>
           </div>
           <div id="cards-Wrap">
             <div id="subMainContent">
-              <div><img src="/assets/img/card-1.png" /></div>
-              <div><img src="/assets/img/card-2.png" /></div>
-              <div><img src="/assets/img/card-3.png" /></div>
-              <div><img src="/assets/img/card-4.png" /></div>
+              <div class="cardBg hero-icon1">
+                <a href="https://www.dndbeyond.com/characters">
+                  <p class="cardText blueCard">Create a character</p></a
+                >
+              </div>
+              <div class="cardBg hero-icon2">
+                <a href="https://www.dndbeyond.com/characters">
+                  <p class="cardText purpleCard">Partnership Benefits</p></a
+                >
+              </div>
+              <div class="cardBg hero-icon3">
+                <a href="https://www.dndbeyond.com/characters">
+                  <p class="cardText redCard">One D&D Playtest</p></a
+                >
+              </div>
+              <div class="cardBg hero-icon4">
+                <a href="https://www.dndbeyond.com/characters">
+                  <p class="cardText orangeCard">Build an Encounter</p></a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -139,46 +213,59 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div id="c-pic-1" class="carousel-pic"></div>
-                <div class="carousel-caption d-md-block">
-                  <h5>What is d&d beyond?</h5>
-                  <p>
-                    Dungeons & Dragons (D&D) is a roleplaying game played by
-                    millions of people around the world. D&D Beyond makes
-                    playing D&D easier.
-                  </p>
-                </div>
+                <a
+                  href="https://www.dndbeyond.com/how-to-play-dnd?icid_medium=ddb&icid_source=article&icid_campaign=logged-out&icid_content=new-player-guide"
+                >
+                  <div class="carousel-caption d-md-block">
+                    <h5>What is d&d beyond?</h5>
+                    <p>
+                      Dungeons & Dragons (D&D) is a roleplaying game played by
+                      millions of people around the world. D&D Beyond makes
+                      playing D&D easier.
+                    </p>
+                  </div>
+                </a>
               </div>
               <div class="carousel-item">
                 <div id="c-pic-2" class="carousel-pic"></div>
-                <div class="carousel-caption d-md-block">
-                  <h5>Dragonlance: Shadow of the Dragon Queen Is Out Now!</h5>
-                  <p>
-                    Takhisis the Dragon Queen has returned to the world of
-                    Krynn. Across the land, her armies of fanatical draconians
-                    wage a brutal war of conquest.
-                  </p>
-                </div>
+                <a
+                  href="https://www.dndbeyond.com/marketplace/adventures/dragonlance-shadow-of-the-dragon-queen?icid_medium=ddb&icid_source=article&icid_campaign=dl-available-direct-logged-out&icid_content=dragonlance"
+                >
+                  <div class="carousel-caption d-md-block">
+                    <h5>Dragonlance: Shadow of the Dragon Queen Is Out Now!</h5>
+                    <p>
+                      Takhisis the Dragon Queen has returned to the world of
+                      Krynn. Across the land, her armies of fanatical draconians
+                      wage a brutal war of conquest.
+                    </p>
+                  </div>
+                </a>
               </div>
               <div class="carousel-item">
                 <div id="c-pic-3" class="carousel-pic"></div>
-                <div class="carousel-caption d-md-block">
-                  <h5>What you get with a d&d beyond subscription</h5>
-                  <p>
-                    Subscribe to D&D Beyond to create unlimited characters,
-                    share your books with friends, and access game tools that
-                    make playing Dungeons & Dragons easier.
-                  </p>
-                </div>
+                <a href="#partnership"
+                  ><div class="carousel-caption d-md-block">
+                    <h5>What you get with a d&d beyond subscription</h5>
+                    <p>
+                      Subscribe to D&D Beyond to create unlimited characters,
+                      share your books with friends, and access game tools that
+                      make playing Dungeons & Dragons easier.
+                    </p>
+                  </div>
+                </a>
               </div>
               <div class="carousel-item">
                 <div id="c-pic-4" class="carousel-pic"></div>
-                <div class="carousel-caption d-md-block">
-                  <h5>Shop D&D's Biggest Sale of the Year!</h5>
-                  <p>
-                    The biggest sale of the year is here! Shop now all your
-                    favourite modules and missing books!
-                  </p>
-                </div>
+                <a
+                  href="https://www.dndbeyond.com/marketplace?icid_medium=ddb&icid_source=article&icid_campaign=cyber-sale-monday-logged-out&icid_content=marketplace"
+                  ><div class="carousel-caption d-md-block">
+                    <h5>Shop D&D's Biggest Sale of the Year!</h5>
+                    <p>
+                      The biggest sale of the year is here! Shop now all your
+                      favourite modules and missing books!
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
             <button
@@ -207,20 +294,23 @@
             </button>
           </div>
         </div>
-        <button id="seeMore" type="submit">See all posts</button>
+        <a href="https://www.dndbeyond.com/posts"
+          ><button id="seeMore" type="submit">See all posts</button></a
+        >
       </secion>
+
       <section>
         <div id="partnership">
           <a href="https://company.wizards.com/en/careers"
             >Want to become our partner? Look no further!</a
           >
         </div>
-        <h2 class="fs-1 text-center">Choose your level</h2>
+        <h2 class="fs-1 text-center my-5">Choose your partnership level</h2>
         <div class="container-fluid">
           <div class="row col-12" id="tierWrap">
             <div class="col-12 col-md-6">
               <div class="partnershipHeader">
-                <div id="heroTier" class="tierDiv">
+                <div id="heroTier" class="tierIconDiv">
                   <img src="/assets/img/svg/hero.svg" />
                 </div>
                 <div class="tierHeader"><h3>Hero</h3></div>
@@ -252,16 +342,12 @@
                     <span>Share unlocked content with other players</span>
                   </li>
                 </ul>
-                <a
-                  ><button type="button" class="partnerButton">
-                    More info
-                  </button></a
-                >
+                <button type="button" class="partnerButton hov">Select</button>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="partnershipHeader">
-                <div id="masterTier" class="tierDiv">
+                <div id="masterTier" class="tierIconDiv">
                   <img src="/assets/img/svg/master.svg" />
                 </div>
                 <div class="tierHeader"><h3>Master</h3></div>
@@ -293,11 +379,7 @@
                     <span>Share unlocked content with other players</span>
                   </li>
                 </ul>
-                <a
-                  ><button type="button" class="partnerButton">
-                    More info
-                  </button></a
-                >
+                <button type="button" class="partnerButton hov">Select</button>
               </div>
             </div>
           </div>
@@ -308,34 +390,80 @@
     <footer>
       <div id="upperFooter">
         <div id="footerLogo">
-          <img src="/assets/img/logo.jpg" width="200px" />
+          <a href="#"><img src="/assets/img/logo.jpg" width="200px" /></a>
           <span>Play With Advantage</span>
         </div>
         <div class="footerLinks">
           <div class="footerListWrapper">
             <ul class="footerList">
               <li class="list-label"><a>Quick links</a></li>
-              <li class="list-item"><a>Compendium</a></li>
-              <li class="list-item"><a>Builder</a></li>
-              <li class="list-item"><a>Characters</a></li>
-              <li class="list-item"><a>Changelog</a></li>
-              <li class="list-item"><a>Careers</a></li>
+              <li class="list-item">
+                <a href="https://www.dndbeyond.com/compendium">Compendium</a>
+              </li>
+              <li class="list-item">
+                <a href="https://www.dndbeyond.com/characters/builder"
+                  >Builder</a
+                >
+              </li>
+              <li class="list-item">
+                <a href="https://www.dndbeyond.com/my-characters">Characters</a>
+              </li>
+              <li class="list-item">
+                <a href="https://www.dndbeyond.com/changelog">Changelog</a>
+              </li>
+              <li class="list-item">
+                <a href="https://www.dndbeyond.com/careers">Careers</a>
+              </li>
             </ul>
             <ul class="footerList">
               <li class="list-label"><a>Support</a></li>
-              <li class="list-item"><a>Help Portal</a></li>
-              <li class="list-item"><a>Support forum</a></li>
-              <li class="list-item"><a>Contact us</a></li>
-              <li class="list-item"><a>Do not sell my info</a></li>
-              <li class="list-item"><a>Cookies</a></li>
+              <li class="list-item">
+                <a href="https://dndbeyond-support.wizards.com">Help Portal</a>
+              </li>
+              <li class="list-item">
+                <a
+                  href="https://www.dndbeyond.com/forums/d-d-beyond-general/bugs-support"
+                  >Support forum</a
+                >
+              </li>
+              <li class="list-item">
+                <a
+                  href="https://dndbeyond.zendesk.com/hc/en-us/articles/360055233654-Contact-Information"
+                  >Contact us</a
+                >
+              </li>
+              <li class="list-item">
+                <a
+                  href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy#donotsell"
+                  >Do not sell my info</a
+                >
+              </li>
+              <li class="list-item">
+                <a href="https://www.dndbeyond.com/cookies">Cookies</a>
+              </li>
             </ul>
             <ul class="footerList">
-              <li class="list-label"><a>Follow us</a></li>
-              <li class="list-item"><a>Twitter</a></li>
-              <li class="list-item"><a>Facebook</a></li>
-              <li class="list-item"><a>Youtube</a></li>
-              <li class="list-item"><a>Twitch</a></li>
-              <li class="list-item"><a>Instagram</a></li>
+              <li class="list-label">
+                <a href="https://twitter.com/DnDBeyond">Follow us</a>
+              </li>
+              <li class="list-item">
+                <a href="https://twitter.com/DnDBeyond">Twitter</a>
+              </li>
+              <li class="list-item">
+                <a href="https://www.facebook.com/dndbeyond/">Facebook</a>
+              </li>
+              <li class="list-item">
+                <a
+                  href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw"
+                  >Youtube</a
+                >
+              </li>
+              <li class="list-item">
+                <a href="https://www.twitch.tv/dndbeyond">Twitch</a>
+              </li>
+              <li class="list-item">
+                <a href="https://www.instagram.com/dndbeyond/">Instagram</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -355,16 +483,25 @@
           <ul>
             <li>
               <a
+                class="lowerFooterLinksItem"
                 href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy"
                 >Privacy Policy</a
               >
             </li>
             <li>
-              <a href="https://company.wizards.com/en/legal/terms"
+              <a
+                class="lowerFooterLinksItem bef"
+                href="https://company.wizards.com/en/legal/terms"
                 >Terms of Service</a
               >
             </li>
-            <li><a href="http://dndbeyond-support.wizards.com">Support</a></li>
+            <li>
+              <a
+                class="lowerFooterLinksItem bef"
+                href="http://dndbeyond-support.wizards.com"
+                >Support</a
+              >
+            </li>
           </ul>
         </div>
       </div>

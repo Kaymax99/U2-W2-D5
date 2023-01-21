@@ -1,0 +1,9 @@
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
+}
+// Utilizzata insieme a delle variabili per settare il colore di alcune sezioni come:
+// le icone nella nav, il testo nell'article main, alcuni bottoni, la list nel footer.

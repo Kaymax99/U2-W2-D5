@@ -1,6 +1,6 @@
 #partnership {
   background-color: $theme-color-primary;
-  color: white;
+  color: set-text-color($theme-color-primary);
   font-weight: bold;
   padding: 1em 0;
   text-align: center;
@@ -23,16 +23,17 @@
   padding-top: 24px;
   border-right: 1px solid #b0b7bd;
 }
-.tierDiv {
-  width: 100%;
+.tierIconDiv {
   @include flexCenterCenter;
-  flex-direction: column;
+  padding: 6px 0;
 }
 #tierWrap {
   margin: 0;
 }
 .tierBox {
   margin-bottom: 1.5em;
+  @include flexCenterCenter;
+  flex-direction: column;
 }
 .partnershipHeader {
   img {

@@ -2,6 +2,11 @@
   margin: 0 $spacing-1;
   cursor: pointer;
 }
+.hov:hover {
+  transition: all 0.3s;
+  background-color: #1579bd;
+  scale: 1.02;
+}
 
 .search {
   border: 0;
@@ -11,8 +16,8 @@
 }
 
 #login-button {
-  color: white;
   background: inherit;
+  color: set-text-color($theme-color-black);
   margin: 0.5em;
   padding: $spacing-1 1em;
   border: 0;
@@ -21,9 +26,9 @@
 #register-button {
   margin: 0.5em;
   padding: $spacing-1 1em;
-  color: white;
-  font-weight: 700;
   background-color: $theme-color-primary;
+  color: set-text-color($theme-color-primary);
+  font-weight: 700;
   border: 0;
 }
 

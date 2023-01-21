@@ -31,3 +31,25 @@
 #c-pic-4 {
   background-image: url(/assets/img/dnd-pic-4.png);
 }
+
+@media screen and (min-width: 1024px) {
+  .carousel-caption {
+    h5 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousel-caption {
+    h5 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
