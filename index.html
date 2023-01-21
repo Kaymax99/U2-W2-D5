@@ -32,15 +32,85 @@
               ><img class="navLogo" src="/assets/img/logo.jpg" height="50px"
             /></a>
             <div>
-              <form class="d-flex">
-                <button type="button" class="button search" type="submit">
+              <div class="d-flex">
+                <button onclick="searchFunction()"
+                  type="button"
+                  class="button search"
+                  type="submit"
+                  id="searchWide"
+                >
                   <i class="bi bi-search"></i>
                 </button>
-                <button type="button" class="button search">
-                  <i class="bi bi-list"></i>
-                </button>
-                <input type="text" placeholder="Search Everything..." />
-              </form>
+                <button
+                type="button"
+                class="button search"
+                type="submit"
+                id="showInput"
+                onclick="showInputFunction()"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+                <div class="dropdown-custom">
+                  <i onclick="dropFunction()" class="bi bi-list dropbtn"></i>
+                  <div id="myDropdown" class="dropdown-content">
+                    <div class="loginArea dropdownItem">
+                      <a href="#">Sign In</a>
+                      <a href="https://www.dndbeyond.com/create-account"
+                        >Free Sign Up</a
+                      >
+                    </div>
+                    <a
+                      href="https://www.dndbeyond.com/characters"
+                      class="dropdownItem"
+                      >Characters</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/classes"
+                      class="dropdownItem"
+                      >Classes</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/sources#Sourcebooks"
+                      class="dropdownItem"
+                      >Sources</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/player-app"
+                      class="dropdownItem"
+                      >Tools</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/marketplace"
+                      class="dropdownItem"
+                      >Marketplace</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/articles"
+                      class="dropdownItem"
+                      >Media</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/forums"
+                      class="dropdownItem"
+                      >Forums</a
+                    >
+                    <a
+                      href="https://www.dndbeyond.com/how-to-play-dnd"
+                      class="dropdownItem"
+                      >New Player Guide</a
+                    >
+                    <a href="#partnership" class="dropdownItem"
+                      >Become a Partner</a
+                    >
+                  </div>
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Search Everything..."
+                  id="sendSearch1"
+                />
+              </div>
             </div>
           </div>
           <div class="d-flex align-items-center">
@@ -130,6 +200,9 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div id="testDiv">
+        <input class="testInput" id="sendSearch2" type="text" placeholder="Search Everything..."></input>
       </div>
     </header>
 
@@ -388,121 +461,129 @@
     </main>
 
     <footer>
-      <div id="upperFooter">
-        <div id="footerLogo">
-          <a href="#"><img src="/assets/img/logo.jpg" width="200px" /></a>
-          <span>Play With Advantage</span>
-        </div>
-        <div class="footerLinks">
-          <div class="footerListWrapper">
-            <ul class="footerList">
-              <li class="list-label"><a>Quick links</a></li>
-              <li class="list-item">
-                <a href="https://www.dndbeyond.com/compendium">Compendium</a>
-              </li>
-              <li class="list-item">
-                <a href="https://www.dndbeyond.com/characters/builder"
-                  >Builder</a
-                >
-              </li>
-              <li class="list-item">
-                <a href="https://www.dndbeyond.com/my-characters">Characters</a>
-              </li>
-              <li class="list-item">
-                <a href="https://www.dndbeyond.com/changelog">Changelog</a>
-              </li>
-              <li class="list-item">
-                <a href="https://www.dndbeyond.com/careers">Careers</a>
-              </li>
-            </ul>
-            <ul class="footerList">
-              <li class="list-label"><a>Support</a></li>
-              <li class="list-item">
-                <a href="https://dndbeyond-support.wizards.com">Help Portal</a>
-              </li>
-              <li class="list-item">
-                <a
-                  href="https://www.dndbeyond.com/forums/d-d-beyond-general/bugs-support"
-                  >Support forum</a
-                >
-              </li>
-              <li class="list-item">
-                <a
-                  href="https://dndbeyond.zendesk.com/hc/en-us/articles/360055233654-Contact-Information"
-                  >Contact us</a
-                >
-              </li>
-              <li class="list-item">
-                <a
-                  href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy#donotsell"
-                  >Do not sell my info</a
-                >
-              </li>
-              <li class="list-item">
-                <a href="https://www.dndbeyond.com/cookies">Cookies</a>
-              </li>
-            </ul>
-            <ul class="footerList">
-              <li class="list-label">
-                <a href="https://twitter.com/DnDBeyond">Follow us</a>
-              </li>
-              <li class="list-item">
-                <a href="https://twitter.com/DnDBeyond">Twitter</a>
-              </li>
-              <li class="list-item">
-                <a href="https://www.facebook.com/dndbeyond/">Facebook</a>
-              </li>
-              <li class="list-item">
-                <a
-                  href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw"
-                  >Youtube</a
-                >
-              </li>
-              <li class="list-item">
-                <a href="https://www.twitch.tv/dndbeyond">Twitch</a>
-              </li>
-              <li class="list-item">
-                <a href="https://www.instagram.com/dndbeyond/">Instagram</a>
-              </li>
-            </ul>
+      <div id="upperFooterWrapper">
+        <div id="upperFooter">
+          <div id="footerLogo">
+            <a href="#" class="footerLogoImg"></a>
+            <span>Play With Advantage</span>
+          </div>
+          <div class="footerLinks">
+            <div class="footerListWrapper">
+              <ul class="footerList">
+                <li class="list-label"><a>Quick links</a></li>
+                <li class="list-item">
+                  <a href="https://www.dndbeyond.com/compendium">Compendium</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.dndbeyond.com/characters/builder"
+                    >Builder</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a href="https://www.dndbeyond.com/my-characters"
+                    >Characters</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a href="https://www.dndbeyond.com/changelog">Changelog</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.dndbeyond.com/careers">Careers</a>
+                </li>
+              </ul>
+              <ul class="footerList">
+                <li class="list-label"><a>Support</a></li>
+                <li class="list-item">
+                  <a href="https://dndbeyond-support.wizards.com"
+                    >Help Portal</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a
+                    href="https://www.dndbeyond.com/forums/d-d-beyond-general/bugs-support"
+                    >Support forum</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a
+                    href="https://dndbeyond.zendesk.com/hc/en-us/articles/360055233654-Contact-Information"
+                    >Contact us</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a
+                    href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy#donotsell"
+                    >Do not sell my info</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a href="https://www.dndbeyond.com/cookies">Cookies</a>
+                </li>
+              </ul>
+              <ul class="footerList">
+                <li class="list-label">
+                  <a href="https://twitter.com/DnDBeyond">Follow us</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://twitter.com/DnDBeyond">Twitter</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.facebook.com/dndbeyond/">Facebook</a>
+                </li>
+                <li class="list-item">
+                  <a
+                    href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw"
+                    >Youtube</a
+                  >
+                </li>
+                <li class="list-item">
+                  <a href="https://www.twitch.tv/dndbeyond">Twitch</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.instagram.com/dndbeyond/">Instagram</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div id="lowerFooter">
-        <div class="copyright">
-          <div class="copyright-site">
-            &copy;2023 D&D Beyond | All Rights Reserved
+      <div id="lowerFooterWrapper">
+        <div id="lowerFooter">
+          <div class="copyright">
+            <div class="copyright-site">
+              &copy;2023 D&D Beyond | All Rights Reserved
+            </div>
+            <div>
+              Dungeons & Dragons, D&D, their respective logos, and all Wizards
+              titles and characters are property of Wizards of the Coast LLC in
+              the U.S.A. and other countries. ©2023 Wizards.
+            </div>
           </div>
-          <div>
-            Dungeons & Dragons, D&D, their respective logos, and all Wizards
-            titles and characters are property of Wizards of the Coast LLC in
-            the U.S.A. and other countries. ©2023 Wizards.
+          <div id="lowerFooterLinks">
+            <ul>
+              <li>
+                <a
+                  class="lowerFooterLinksItem"
+                  href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="lowerFooterLinksItem bef"
+                  href="https://company.wizards.com/en/legal/terms"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  class="lowerFooterLinksItem bef"
+                  href="http://dndbeyond-support.wizards.com"
+                  >Support</a
+                >
+              </li>
+            </ul>
           </div>
-        </div>
-        <div id="lowerFooterLinks">
-          <ul>
-            <li>
-              <a
-                class="lowerFooterLinksItem"
-                href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a
-                class="lowerFooterLinksItem bef"
-                href="https://company.wizards.com/en/legal/terms"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a
-                class="lowerFooterLinksItem bef"
-                href="http://dndbeyond-support.wizards.com"
-                >Support</a
-              >
-            </li>
-          </ul>
         </div>
       </div>
     </footer>

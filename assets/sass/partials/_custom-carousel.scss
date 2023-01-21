@@ -4,7 +4,7 @@
   margin: 2em 0;
 }
 .carousel-item {
-  height: 60vh;
+  height: 600px;
 }
 
 .carousel-caption {
@@ -32,6 +32,14 @@
   background-image: url(/assets/img/dnd-pic-4.png);
 }
 
+@media screen and (min-width: 1200px) {
+  #carouselArticles {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .carousel-caption {
     h5 {
@@ -40,6 +48,23 @@
     p {
       font-size: 1.2em;
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-item {
+    height: 400px;
+  }
+  #c-pic-1,
+  #c-pic-3,
+  #c-pic-4 {
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-item {
+    height: 300px;
   }
 }
 

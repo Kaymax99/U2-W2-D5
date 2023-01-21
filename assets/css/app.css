@@ -20,6 +20,75 @@ a {
   color: inherit;
 }
 
+input:focus {
+  outline: none;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: #979aa4;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-custom {
+  position: relative;
+  display: inline-block;
+}
+
+.loginArea {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdownItem {
+  border-bottom: 1px solid #26282a;
+}
+
+.dropdown-content {
+  position: absolute;
+  right: 0px;
+  top: 44px;
+  background-color: #000000;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #979aa4;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#subNavContainer {
+  position: relative;
+}
+
+.testInput {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 2em;
+}
+
+#testDiv {
+  display: none;
+  padding: 0.5em;
+}
+
+.show {
+  display: block !important;
+}
+
+@media screen and (max-width: 576px) {
+  .testInput {
+    font-size: 1.1em;
+  }
+}
 .button {
   margin: 0 0.5em;
   cursor: pointer;
@@ -136,23 +205,28 @@ nav ul li i {
 @media screen and (max-width: 1024px) {
   nav input,
 nav .socials,
-nav .userArea {
+nav .userArea,
+nav #searchWide {
     display: none;
   }
   #subNav {
     display: none;
   }
-  #navTop {
+  #navContainer #navTop {
     width: 100%;
-    justify-content: space-between !important;
+    justify-content: space-between;
   }
-  #navTop .bi-list {
+  #navContainer #navTop .bi-list {
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 1025px) {
-  .bi-list {
-    display: none;
+  .dropdown,
+.dropdown-content,
+.bi-list,
+#showInput,
+#testDiv {
+    display: none !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -381,7 +455,7 @@ article .mainContent div p {
 }
 
 .carousel-item {
-  height: 60vh;
+  height: 600px;
 }
 
 .carousel-caption h5 {
@@ -411,12 +485,34 @@ article .mainContent div p {
   background-image: url(/assets/img/dnd-pic-4.png);
 }
 
+@media screen and (min-width: 1200px) {
+  #carouselArticles {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .carousel-caption h5 {
     font-size: 2em;
   }
   .carousel-caption p {
     font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-item {
+    height: 400px;
+  }
+  #c-pic-1,
+#c-pic-3,
+#c-pic-4 {
+    background-position: right;
+  }
+}
+@media screen and (max-width: 576px) {
+  .carousel-item {
+    height: 300px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -507,57 +603,73 @@ article .mainContent div p {
 
 @media screen and (min-width: 1024px) {
   .container-fluid {
-    max-width: 1000px;
+    max-width: 1200px;
+  }
+  .partnerFeature span {
+    font-size: 1.4em;
   }
 }
-#upperFooter {
+.footerLogoImg {
+  background-image: url(/assets/img/svg/footer-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 64px;
+  width: 200px;
+}
+
+#upperFooterWrapper {
+  background-color: #26282a;
+}
+#upperFooterWrapper #upperFooter {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding: 2em 2em 0;
+  padding: 2em 2em;
   margin-top: 2em;
-  background-color: #26282a;
   color: #979aa4;
 }
-#upperFooter #footerLogo {
+#upperFooterWrapper #upperFooter #footerLogo {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-basis: 0;
 }
-#upperFooter #footerLogo span {
+#upperFooterWrapper #upperFooter #footerLogo span {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
-  margin-top: -10px;
   font-weight: bold;
   font-size: 1em;
 }
-#upperFooter .footerLinks {
+#upperFooterWrapper #upperFooter .footerLinks {
   flex-basis: 2;
 }
-#upperFooter .footerListWrapper {
+#upperFooterWrapper #upperFooter .footerListWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
-#upperFooter .footerListWrapper .footerList {
+#upperFooterWrapper #upperFooter .footerListWrapper .footerList {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
   padding: 0 10px;
+  margin-bottom: 0;
 }
-#upperFooter .footerListWrapper .footerList .list-item {
+#upperFooterWrapper #upperFooter .footerListWrapper .footerList .list-item {
   color: #ffffff;
   padding-top: 5px;
 }
 
-#lowerFooter {
+#lowerFooterWrapper {
   background-color: #191a1b;
+}
+
+#lowerFooter {
   padding: 0.75em;
   font-size: 0.7em;
   color: #979aa4;
@@ -587,6 +699,14 @@ article .mainContent div p {
   display: flex;
 }
 
+@media screen and (min-width: 1200px) {
+  #upperFooter,
+#lowerFooter {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 1024px) {
   #lowerFooter {
     width: 100%;
@@ -600,31 +720,23 @@ article .mainContent div p {
     padding-bottom: 1em;
   }
 }
+@media screen and (min-width: 768px) {
+  .list-item a {
+    font-size: 1.25em;
+  }
+}
+@media screen and (min-width: 576px) {
+  .footerLinks {
+    width: 100%;
+    max-width: 600px;
+  }
+}
 @media screen and (max-width: 576px) {
-  #upperFooter {
+  #upperFooterWrapper #upperFooter {
     display: block;
     padding: 2em 0;
   }
-  #upperFooter .footerLinks {
+  #upperFooterWrapper #upperFooter .footerLinks {
     margin-top: 1rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  nav input,
-nav .socials,
-nav .userArea {
-    display: none;
-  }
-  #navTop {
-    width: 100%;
-    justify-content: space-between !important;
-  }
-  #navTop .bi-list {
-    font-size: 1.5em;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .bi-list {
-    display: none;
   }
 }/*# sourceMappingURL=app.css.map */

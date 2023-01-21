@@ -27,7 +27,6 @@ nav {
     border-right: 1px solid rgba(128, 128, 128, 0.4);
     li {
       color: set-text-color($theme-color-black);
-      //Utilizzo la funzione creata in precedenza per settare il colore degli item lista nella nav a bianco
       padding: 1em $spacing-1;
       i {
         font-size: 1.1em;
@@ -56,26 +55,35 @@ nav {
   nav {
     input,
     .socials,
-    .userArea {
+    .userArea,
+    #searchWide {
       display: none;
     }
   }
+
   #subNav {
     display: none;
   }
-  #navTop {
-    width: 100%;
-    justify-content: space-between !important;
-    .bi-list {
-      font-size: 1.5em;
+  #navContainer {
+    #navTop {
+      width: 100%;
+      justify-content: space-between;
+      .bi-list {
+        font-size: 1.5em;
+      }
     }
   }
 }
 @media screen and (min-width: 1025px) {
-  .bi-list {
-    display: none;
+  .dropdown,
+  .dropdown-content,
+  .bi-list,
+  #showInput,
+  #testDiv {
+    display: none !important;
   }
 }
+
 @media screen and (min-width: 1200px) {
   #navContainer {
     width: 100%;
